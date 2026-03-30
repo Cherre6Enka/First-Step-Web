@@ -1,83 +1,103 @@
 body {
   margin: 0;
   padding: 0;
-  height: 1000px;
-  margin-bottom: 50px; 
+  min-height: 100vh;
+  font-size: 100%;
 }
+
+.content-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .krug {
   position: fixed;
   border-radius: 50px;
-  display: fixed;
   height: 60px;
   width: 60px;
-  background: url('../images/discord.png') black no-repeat center;
+  background: url("../images/discord.png") black no-repeat center;
   background-size: cover;
   left: 20px;
   bottom: 20px;
   z-index: 2;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 .krug:hover {
-  transition: background-color 0.3s, transform 0.3s;
   transform: scale(1.1);
 }
 .Steam {
-  background: url('../images/Steamlogo.png') no-repeat center /40px;
+  background: url("../images/Steamlogo.png") no-repeat center / 40px;
   padding: 20px;
   margin: 30px;
+  transition: transform 0.3s ease;
 }
 .Steam:hover {
-  transition: background-color 0.3s, transform 0.3s;
   transform: scale(1.2);
 }
 .TikTok {
-  background: url('../images/tiktok.png') no-repeat center /80px;
+  background: url("../images/tiktok.png") no-repeat center / 80px;
   padding: 20px;
   margin: 30px;
+  transition: transform 0.3s ease;
 }
 .TikTok:hover {
-  transition: background-color 0.3s, transform 0.3s;
   transform: scale(1.2);
 }
 .YouTube {
-  background: url('../images/youtube.png') no-repeat center /40px;
+  background: url("../images/youtube.png") no-repeat center / 40px;
   padding: 20px;
   margin: 30px;
+  transition: transform 0.3s ease;
 }
 .YouTube:hover {
-  transition: background-color 0.3s, transform 0.3s;
   transform: scale(1.2);
 }
 .Instagram {
-  background: url('../images/Instagram.png') no-repeat center /40px;
+  background: url("../images/Instagram.png") no-repeat center / 40px;
   padding: 20px;
   margin: 30px;
+  transition: transform 0.3s ease;
 }
 .Instagram:hover {
-  transition: background-color 0.3s, transform 0.3s;
   transform: scale(1.2);
 }
-header, footer {
-  height: 70px;
+
+header,
+footer {
   width: 100%;
   border-bottom: 5px solid silver;
   background: #333;
   color: #fff;
   line-height: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   text-align: center;
-  float: left;
+  box-sizing: border-box;
 }
+header {
+  height: 70px;
+  border-bottom: 5px solid silver;
+}
+
 .nav-menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 0;
 }
-.nav-menu li{
-  margin-right: 100px;
- position: relative;
- top: -70px;
+.nav-menu li {
+  margin: 0 50px;
+  position: relative;
 }
 .nav-menu a {
   text-decoration: none;
@@ -85,130 +105,85 @@ header, footer {
   font-family: cursive;
   font-size: 20px;
 }
-.nav-menu a:hover{
+.nav-menu a:hover {
   text-decoration: none;
   color: #9c42f5;
   font-family: cursive;
   font-size: 20px;
 }
+
+.main-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
 main {
-  width: 50%;
-  float: left;
+  width: 65%;
   background: #fff;
   border-radius: 30px;
   border: solid silver;
   padding: 20px 2.5%;
-  margin-left: 12.5%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
+
 aside {
-  height: 90%;
-  float: left;
+  width: 20%;
   background: #fff;
-  padding: 20px 2.5%;
-  margin-left: 21.5%;
-  position: absolute;
+  padding: 20px 1.5%;
   border-radius: 30px;
   border: solid silver;
-  margin-top: 3%;
-  right: 50px;
+  box-sizing: border-box;
   display: grid;
 }
-.aside2{
-  height: 160%;
-  float: left;
-  background: #fff;
-  padding: 20px 2.5%;
-  margin-left: 21.5%;
-  position: absolute;
-  border-radius: 30px;
-  border: solid silver;
-  margin-top: 3.5%;
-  right: 1750px;
-  display: grid;
-  background: url('../images/gradient.jpg') black no-repeat center;
-  background-size: cover;
-}
-.aside3 {
-  height: 5%;
-  width: 14%;
-  float: left;
-  background: #fff;
-  padding: 20px 2.5%;
-  margin-left: 21.5%;
-  background: url('../images/gradient2.jpg');
-  background-size: cover;
-  position: absolute;
-  border-radius: 30px;
-  border: solid silver;
-  margin-top: 3%;
-  right: 40px;
-  bottom: -175px;
-  display: grid;
-  z-index: 1;
-}
-.aside4 {
-  height: 90%;
-  float: left;
-  background: #fff;
-  padding: 20px 2.5%;
-  margin-left: 21.5%;
-  background: url('../images/gradient3.jpg');
-  background-size: cover;
-  position: absolute;
-  border-radius: 30px;
-  border: solid silver;
-  margin-top: 3%;
-  right: 80px;
-  display: grid;
-  right: 300px;
-}
+
 section {
-  width: 50%;
-  float: left;
+  width: 65%;
   border-radius: 30px;
   background-color: #fff;
   border: solid silver;
   padding: 50px 2.5%;
-  margin-left: 12.5%;
   margin-top: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #ccc;
+  box-sizing: border-box;
 }
+
 .section2 {
-  width: 15%;
+  width: 20%;
   border-radius: 30px;
   background-color: #fff;
   border: solid silver;
-  margin-left: 25%;
   margin-top: 2%;
   border-bottom: 2px solid #ccc;
   text-align: left;
-  position: relative;
-  float: right;
-  right: 100px;
-  top: -530px;
+  box-sizing: border-box;
 }
-.section2 form{
+
+.section2 form {
   text-align: left;
   font-family: cursive;
   margin: 20px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  align-items: flex-start;
 }
 .section2 input {
   color: #9c42f5;
   border-radius: 10px;
 }
 .foto {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: 400px;
   border-radius: 30px;
-  background: url('../images/keks.jpg') red;
+  background: url("../images/keks.jpg") #fff;
   background-size: cover;
 }
 table {
@@ -216,7 +191,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   padding: 15px;
 }
 
@@ -227,7 +203,6 @@ tr {
   font-family: cursive;
   font-size: 20px;
   margin: 40px;
-  margin-top: 40px;
   padding-right: 100px;
   padding-left: 100px;
 }
@@ -257,26 +232,29 @@ p {
   font-size: 17px;
 }
 .kvadrat {
-  position: relative;
+  position: absolute;
   height: 60px;
   width: 60px;
-  background: url('../images/logo.png') #333 no-repeat center;
+  background: url("../images/logo.png") #333 no-repeat center;
   background-size: cover;
   left: 20px;
-  top: 7px;
+  top: 5px;
 }
-.address{
+.address {
   text-align: right;
 }
 .text-footer {
   text-align: left;
   font-family: cursive;
-
+}
+.text-footer ul {
+  list-style-type: none;
 }
 .scroll-to-top {
   position: relative;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #9c42f5;
   color: white;
   width: 50px;
@@ -285,35 +263,84 @@ p {
   text-decoration: none;
   font-size: 24px;
   display: flex;
-  bottom: -125px;
-  left: 50%;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.3s;
-
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 .scroll-to-top:hover {
   background-color: #fc038c;
-  transform: scale(1.1);
+  transform: translateX(-50%) scale(1.1);
 }
-.text-footer {
-margin: 5px;
-padding: 5px;
-list-style-type: none;
-list-style: none;
-}
-.text-footer ul{
-  list-style-type: none;
-  }
+
 footer {
-  position: static;
-  bottom: 0px;
+  position: relative;
+  bottom: 0;
   border-top: 5px solid silver;
-  border-bottom: 0px;
-  margin-bottom: 0px;
-  margin-top: -200px;
-  height: 320px;
-  line-height: 50px;
+  border-bottom: 0;
+  margin-top: 20px;
+  height: auto;
+  line-height: normal;
+  padding: 20px 0;
+}
+
+@media (max-width: 900px) {
+  .main-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main,
+  aside,
+  section,
+  .section2 {
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav-menu li {
+    margin: 0;
+  }
+  .nav-menu a {
+    padding: 5px 0;
+    display: block;
+  }
+
+  header {
+    height: auto;
+    line-height: normal;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .foto {
+    width: 100%;
+    height: auto;
+  }
+
+  .recipe-table {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px 0;
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+    transform: scale(1);
+  }
+
+  .scroll-to-top:hover {
+    transform: scale(1.1);
+  }
 }
